@@ -10,7 +10,7 @@ document.getElementById("donate-form").addEventListener("submit", async function
   }
 
   try {
-      const response = await fetch("http://localhost:3000/generate-qr", {
+      const response = await fetch("https://your-server.com/generate-qr", { // เปลี่ยนเป็น URL ของเซิร์ฟเวอร์ที่โฮสต์
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({ amount, donorName: name })  // ส่งทั้งชื่อและจำนวนเงิน
