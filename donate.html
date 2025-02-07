@@ -74,17 +74,21 @@
   <!-- ส่วนเนื้อหาของการบริจาค -->
   <section class="container py-5">
     <h2>💰 กรุณากรอกข้อมูลการบริจาค</h2>
-    <form id="donate-form">
-      <div class="mb-3">
-        <label for="donor-name" class="form-label">👤 ชื่อของคุณ</label>
-        <input type="text" class="form-control" id="donor-name" placeholder="กรุณากรอกชื่อ" required>
-      </div>
-      <div class="mb-3">
-        <label for="donation-amount" class="form-label">💵 จำนวนเงินที่บริจาค (บาท)</label>
-        <input type="number" class="form-control" id="donation-amount" placeholder="กรุณากรอกจำนวนเงิน" required>
-      </div>
-      <button type="submit" class="btn btn-success w-100">✅ บริจาคเลย!</button>
-    </form>
+   <form id="donate-form">
+  <div class="mb-3">
+    <label for="donor-name" class="form-label">👤 ชื่อของคุณ</label>
+    <input type="text" class="form-control" id="donor-name" placeholder="กรุณากรอกชื่อ" required>
+  </div>
+  <div class="mb-3">
+    <label for="donation-amount" class="form-label">💵 จำนวนเงินที่บริจาค (บาท)</label>
+    <input type="number" class="form-control" id="donation-amount" placeholder="กรุณากรอกจำนวนเงิน" required>
+  </div>
+  <div class="mb-3">
+    <label for="proof-upload" class="form-label">📎 อัปโหลดหลักฐานการโอน (สลิป)</label>
+    <input type="file" class="form-control" id="proof-upload" accept="image/*" required>
+  </div>
+  <button type="submit" class="btn btn-success w-100">✅ บริจาคเลย!</button>
+</form>
 
     <h3 class="mt-4">📌 ช่องทางการบริจาคผ่าน QR Code</h3>
     <p>คุณสามารถสแกน QR Code ด้านล่างเพื่อทำการบริจาค:</p>
