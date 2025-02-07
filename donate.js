@@ -16,7 +16,7 @@ document.getElementById("donate-form").addEventListener("submit", async function
 
     try {
         // ส่งข้อมูลไปที่เซิร์ฟเวอร์
-        const response = await fetch("http://localhost:3000/donate", {
+        const response = await fetch("http://localhost:3000/generate-qr", {
             method: "POST",
             body: formData
         });
@@ -24,8 +24,9 @@ document.getElementById("donate-form").addEventListener("submit", async function
         const data = await response.json();
 
         // ตรวจสอบผลลัพธ์ที่ได้จากเซิร์ฟเวอร์
-        if (data.success) {
-            alert("🎉 ส่งข้อมูลสำเร็จ! รอการตรวจสอบ");
+        if (data.qrCode) {
+            document.getElementById("qrcode").innerHTML = `<img src="${data.qrCode}" alt="QR Code">`;
+            alert("🎉 ข้อมูลการบริจาคได้รับการบันทึกแล้ว! กรุณาสแกน QR Code เพื่อทำการบริจาค");
         } else {
             alert("เกิดข้อผิดพลาด: " + data.error);
         }
