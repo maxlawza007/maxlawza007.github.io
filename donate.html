@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>บริจาค</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/qrcodejs/qrcode.min.js"></script> <!-- ใช้สร้าง QR Code -->
+  <style>
+    body {
+      background-color: #fff0f5; /* พื้นหลังสีชมพูอ่อน */
+      color: #333;
+    }
+
+    header {
+      background-color: #ff69b4; /* สีชมพู */
+    }
+
+    header h1 {
+      color: white;
+    }
+
+    .btn-success {
+      background-color: #ff85a2; /* ปรับสีปุ่มเป็นชมพู */
+      border: none;
+    }
+
+    .btn-success:hover {
+      background-color: #ff4f78; /* สีชมพูเข้มขึ้นเมื่อ hover */
+    }
+
+    .table-light {
+      background-color: #ffe4e1; /* พื้นหลังตารางสีชมพูอ่อน */
+    }
+
+    .table-bordered {
+      border: 1px solid #ff69b4; /* ขอบตารางเป็นสีชมพู */
+    }
+
+    .table th, .table td {
+      text-align: center;
+    }
+
+    .table th {
+      background-color: #ffb6c1; /* พื้นหลังหัวตารางเป็นชมพูอ่อน */
+    }
+
+    .table td {
+      background-color: #fff; /* พื้นหลังตารางเป็นขาว */
+    }
+
+    #qrcode img {
+      width: 200px;
+      height: 200px;
+    }
+
+  </style>
+</head>
+<body>
+  <header class="text-white py-4">
+    <div class="container">
+      <h1>🧡 บริจาคเพื่อช่วยแมว 🐱</h1>
+      <nav>
+        <ul class="nav justify-content-center">
+          <li class="nav-item"><a class="nav-link text-white" href="index.html">หน้าแรก</a></li>
+          <li class="nav-item"><a class="nav-link text-white" href="booking.html">จองเวลา</a></li>
+          <li class="nav-item"><a class="nav-link text-white" href="chat.html">ห้องแชท</a></li>
+          <li class="nav-item"><a class="nav-link text-white" href="shop.html">ร้านค้า</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ส่วนเนื้อหาของการบริจาค -->
+  <section class="container py-5">
+    <h2>💰 กรุณากรอกข้อมูลการบริจาค</h2>
+    <form id="donate-form">
+      <div class="mb-3">
+        <label for="donor-name" class="form-label">👤 ชื่อของคุณ</label>
+        <input type="text" class="form-control" id="donor-name" placeholder="กรุณากรอกชื่อ" required>
+      </div>
+      <div class="mb-3">
+        <label for="donation-amount" class="form-label">💵 จำนวนเงินที่บริจาค (บาท)</label>
+        <input type="number" class="form-control" id="donation-amount" placeholder="กรุณากรอกจำนวนเงิน" required>
+      </div>
+      <button type="submit" class="btn btn-success w-100">✅ บริจาคเลย!</button>
+    </form>
+
+    <h3 class="mt-4">📌 ช่องทางการบริจาคผ่าน QR Code</h3>
+    <p>คุณสามารถสแกน QR Code ด้านล่างเพื่อทำการบริจาค:</p>
+    
+    <!-- ช่องแสดง QR Code -->
+    <div id="qrcode" class="text-center my-3"></div>
+
+    <h3 class="mt-4">📜 รายการบริจาคของคุณ</h3>
+    <table class="table table-bordered mt-3">
+      <thead class="table-light">
+        <tr>
+          <th>#</th>
+          <th>👤 ชื่อ</th>
+          <th>💵 จำนวนเงิน</th>
+          <th>⏰ วันที่</th>
+          <th>🗑 ลบ</th>
+        </tr>
+      </thead>
+      <tbody id="donation-list">
+        <tr><td colspan="5" class="text-center">📡 กำลังโหลด...</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <script src="donate.js"></script> <!-- ไฟล์ JavaScript -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

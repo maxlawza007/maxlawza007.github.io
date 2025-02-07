@@ -1,0 +1,39 @@
+/* กำหนดพื้นหลังและฟอนต์ให้กับ body */
+body {
+  background-color: #FFF5F5; /* สีพื้นหลังอ่อนๆ สดใส */
+  font-family: 'Arial', sans-serif;
+}
+
+/* สไตล์สำหรับ header */
+header {
+  background-color: #FFB6C1; /* สีชมพูอ่อน */
+  color: #ffffff;
+}
+
+header h1 {
+  font-size: 2rem;
+}
+
+/* ปรับสไตล์สำหรับปุ่มจองเวลา */
+#book-btn {
+  background-color: #FF69B4; /* สีชมพูสด */
+  color: white;
+  font-size: 1.2rem;
+  border: none;
+  padding: 10px 20px;
+}
+
+#book-btn:hover {
+  background-color: #FF1493; /* สีชมพูเข้มขึ้นเมื่อเอาเมาส์ไปวาง */
+}
+
+/* ปรับแต่ง input วันที่และเวลา */
+#booking-time {
+  background-color: #FFDDEE; /* สีพื้นหลังของ input */
+  border: 2px solid #FF69B4; /* ขอบสีชมพู */
+  font-size: 1rem;
+}
+
+#booking-time:focus {
+  border-color: #FF1493; /* ขอบสีชมพูเข้มเมื่อ input อยู่ในสถานะ focus */
+}

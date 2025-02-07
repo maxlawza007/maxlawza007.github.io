@@ -1,0 +1,87 @@
+/* ปรับสีพื้นหลังของ body */
+body {
+    background-color: #FFF5F5; /* สีพื้นหลังอ่อนๆ สดใส */
+    font-family: 'Arial', sans-serif;
+  }
+  
+  /* สไตล์สำหรับ header */
+  header {
+    background-color: #FFB6C1; /* สีชมพูอ่อน */
+    color: #ffffff;
+  }
+  
+  /* ปรับขนาดฟอนต์ใน header */
+  header h1 {
+    font-size: 2rem;
+  }
+  
+  /* สไตล์เมนู */
+  header nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1.1rem;
+  }
+  
+  header nav ul li a:hover {
+    text-decoration: underline;
+  }
+  
+  /* สไตล์สำหรับการ์ดสินค้า */
+  .card {
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* เพิ่มเงาให้การ์ด */
+    overflow: hidden;
+  }
+  
+  .card img {
+    object-fit: cover;
+    height: 200px; /* ปรับขนาดของภาพ */
+  }
+  
+  .card-body {
+    background-color: #FFDDEE; /* สีพื้นหลังของการ์ด */
+  }
+  
+  .card-title {
+    color: #FF69B4; /* สีชมพูสดใส */
+  }
+  
+  .card-text {
+    color: #555;
+  }
+  
+  /* ปุ่มซื้อสินค้า */
+  .btn-primary {
+    background-color: #FF69B4; /* สีชมพูสดใส */
+    border: none;
+  }
+  
+  .btn-primary:hover {
+    background-color: #FF1493; /* สีชมพูเข้ม */
+    color: white;
+  }
+  
+  /* สไตล์สำหรับสินค้าแต่ละชิ้น */
+  .card-body button {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    text-align: center;
+  }
+  
+  .row {
+    margin-top: 20px;
+  }
+  
+  /* ปรับขนาดบนอุปกรณ์ที่มีหน้าจอเล็ก */
+  @media (max-width: 768px) {
+    header h1 {
+      font-size: 1.5rem;
+    }
+  
+    .card-body button {
+      font-size: 0.9rem;
+    }
+  }
+  

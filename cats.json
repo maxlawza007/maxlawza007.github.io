@@ -1,0 +1,14 @@
+[
+  {
+    "id": 1,
+    "name": "มิตเทนส์",
+    "description": "แมวสุดน่ารัก ที่ชอบเล่นกับลูกบอล",
+    "image": "images/mittens.png"
+  },
+  {
+    "id": 2,
+    "name": "วิสเกอร์ส",
+    "description": "แมวที่รักความสงบ มักนั่งอยู่ในที่เงียบ",
+    "image": "images/whiskers.png"
+  }
+]

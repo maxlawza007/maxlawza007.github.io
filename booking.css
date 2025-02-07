@@ -1,0 +1,54 @@
+/* ---- Header แบบ Gradient ---- */
+header {
+  background: linear-gradient(135deg, #ff9a9e, #fecfef);
+  text-align: center;
+  border-radius: 0 0 15px 15px;
+}
+
+/* ---- Navigation Bar ---- */
+.nav .nav-link {
+  color: rgb(233, 79, 79) !important;
+  font-size: 1.1rem;
+  transition: 0.3s;
+}
+
+.nav .nav-link:hover {
+  color: #ffdd57 !important;
+}
+
+/* ---- กล่องจองเวลา ---- */
+.container {
+  max-width: 500px;
+  background: white;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+/* ---- อินพุตเลือกเวลา ---- */
+#booking-time {
+  border-radius: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+}
+
+/* ---- ปุ่มจองเวลา ---- */
+#book-btn {
+  background: #ff6f61;
+  border: none;
+  font-weight: bold;
+  border-radius: 50px;
+  padding: 10px 20px;
+  transition: background 0.3s, transform 0.2s;
+  color: white;
+}
+
+#book-btn:hover {
+  background: #ff3b2f;
+  transform: scale(1.1);
+}
+
+#book-btn i {
+  margin-left: 5px;
+}

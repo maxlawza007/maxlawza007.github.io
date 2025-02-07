@@ -1,0 +1,16 @@
+[
+  {
+    "id": 1,
+    "name": "ของเล่นแมว",
+    "price": 150,
+    "image": "images/cat_toy.png",
+    "description": "ของเล่นแมวที่ช่วยเสริมพัฒนาการ"
+  },
+  {
+    "id": 2,
+    "name": "เตียงแมว",
+    "price": 450,
+    "image": "images/cat.png",
+    "description": "เตียงที่สะดวกสบายสำหรับแมว"
+  }
+]
