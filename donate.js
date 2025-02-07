@@ -3,17 +3,23 @@ document.getElementById("donate-form").addEventListener("submit", async function
 
     const name = document.getElementById("donor-name").value.trim();
     const amount = parseFloat(document.getElementById("donation-amount").value.trim());
-    const proofFile = document.getElementById("proof-upload").files[0];
+    // อัปเดต: ไม่ต้องตรวจสอบไฟล์
+    const proofFile = document.getElementById("proof-upload") ? document.getElementById("proof-upload").files[0] : null;
 
-    if (!name || amount <= 0 || !proofFile) {
-        alert("กรุณากรอกชื่อ, จำนวนเงิน และอัปโหลดหลักฐาน");
+    // ตรวจสอบแค่ชื่อและจำนวนเงิน
+    if (!name || amount <= 0) {
+        alert("กรุณากรอกชื่อ และจำนวนเงินที่บริจาค");
         return;
     }
 
     const formData = new FormData();
     formData.append("donorName", name);
     formData.append("amount", amount);
-    formData.append("proof", proofFile);
+    
+    // ถ้ามีไฟล์ proof ก็จะเพิ่มไฟล์นั้นไปด้วย
+    if (proofFile) {
+        formData.append("proof", proofFile);
+    }
 
     try {
         const response = await fetch("http://localhost:3000/upload-proof", {
